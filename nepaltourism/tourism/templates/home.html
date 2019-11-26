@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta charset="utf-8">
+    <title>Tourism</title>
+  </head>
+  <body>
+    
+
+    <div class="pictures">
+      <h1>Highlights</h1></br>
+
+    {% for pictures in pictures %}
+      <img src="{{ pictures.image.url }}">
+    {% endfor %}
+    </div>
+
+
+
+  <div class = "place">
+    <h1>To Visit</h1>
+
+      {% for place in place %}
+      {{place.location}}</br>
+      {{ place.description }}</br>
+      {% endfor %}
+  </div>
+
+
+
+  <div class = "festival">
+    <h1>Festivals and Events</h1>
+
+    {% for festival in festival %}
+    {{ festival.title }}</br>
+    {{ festival.datetime }}</br>
+    {{ festival.description }}</br>
+    {% endfor %}
+    </div>
+
+
+
+    <div class = "todolist">
+      <h1>TODO lists</h1>
+
+      {% for todolist in todolist %}
+      {{ todolist.title }}</br>
+      {{ todolist.description }}</br>
+      {% endfor %}
+      </div>
+
+
+
+      <div class = "blogstory">
+        <h1>BlogStory</h1>
+
+        {% for blogstory in blogstory %}
+        {{ blogstory.title }}</br>
+        {{ blogstory.datetime }}</br>
+        {{ blogstory.body }}</br>
+        {% endfor %}
+        </div>
+  </body>
+</html>

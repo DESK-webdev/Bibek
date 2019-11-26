@@ -1,0 +1,44 @@
+*{
+  padding:0;
+  margin:0;
+
+}
+
+body{
+  background-image: url('static/images/tourismback.png');
+
+}
+
+
+body .pictures{
+  padding-left: 20px;
+  padding-right: 20px;
+  vertical-align: middle;
+  overflow-x: scroll;
+  display: flex;
+
+}
+body .pictures img{
+  height: 110vh;
+  width: 100%;
+}
+
+
+body .place{
+  text-align: center;
+}
+
+body .festival{
+  text-align: center;
+
+}
+
+body .todolist{
+  text-align: center;
+
+}
+
+body .blogstory{
+  text-align: center;
+
+}
