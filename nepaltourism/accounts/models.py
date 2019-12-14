@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class profile (models.Model):
+class Clientprofile (models.Model):
     first_name = models.CharField(max_length=100, blank=False)
     last_name = models.CharField(max_length=100, blank=False)
     email = models.CharField(max_length = 100, blank = False)
@@ -11,6 +11,19 @@ class profile (models.Model):
 
     def __str__(self):
         return self.email
+    
+class Serviceprovider(models.Model):
+    company_name = models.CharField(max_length=50)
+    Address = models.CharField(max_length = 50)
+    phone_number = models.CharField(max_length = 15)
+    website = models.URLField( max_length=200)
+    facebook = models.URLField(max_length=200)
+    instagram = models.URLField(max_length=200)
+    email = models.EmailField(max_length=254)
+    Manager = models.CharField(max_length = 50)
+    image = models.ImageField(upload_to='serviceproviderimages', height_field=300, width_field=600, max_length=None)
 
-class font(models.Model):
-    font_size = models.IntegerField()
+    def __str__(self):
+        return self.company_name
+    
+

@@ -59,7 +59,7 @@
         {% for blogstory in blogstory %}
         {{ blogstory.title }}</br>
         {{ blogstory.datetime }}</br>
-        {{ blogstory.body }}</br>
+        {{ blogstory.body |safe}}</br>
         {% endfor %}
         </div>
   </body>
